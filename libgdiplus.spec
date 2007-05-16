@@ -3,7 +3,7 @@
 
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
-Version: 1.2.3
+Version: 1.2.4
 Release: %mkrel 1
 License:	MIT
 Group:		System/Libraries
@@ -14,6 +14,7 @@ BuildRequires:	cairo-devel >= 0.1.22
 BuildRequires:	glitz-devel
 BuildRequires:	glib2-devel
 BuildRequires:	libjpeg-devel
+BuildRequires:	libexif-devel
 BuildRequires:	libungif-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	automake1.8
