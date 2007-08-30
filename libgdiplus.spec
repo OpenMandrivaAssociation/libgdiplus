@@ -21,6 +21,7 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libxrender-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	libfontconfig-devel
 BuildRequires:	automake1.8
 
 %description
