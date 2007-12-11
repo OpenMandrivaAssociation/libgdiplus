@@ -72,11 +72,12 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(0644, root, root, 0755)
-%doc AUTHORS COPYING src/ChangeLog
+%doc AUTHORS COPYING
 %{_libdir}/*.so.%{lib_major}*
 
 %files -n %{libnamedev}
 %defattr(0644, root, root, 0755)
+%doc src/ChangeLog
 %{_libdir}/*.so
 %attr(644,root,root) %{_libdir}/*.*a
 %{_libdir}/pkgconfig/*
