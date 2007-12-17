@@ -10,7 +10,6 @@ License:	MIT
 Group:		System/Libraries
 URL:		http://go-mono.com
 Source:		http://www.go-mono.com/sources/%name/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 #BuildRequires:	cairo-devel >= 0.1.22
 #BuildRequires:	glitz-devel
 BuildRequires:	glib2-devel
