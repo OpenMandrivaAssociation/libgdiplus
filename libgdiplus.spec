@@ -4,7 +4,7 @@
 
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
-Version: 2.2
+Version: 2.4
 Release: %mkrel 1
 License:	MIT
 Group:		System/Libraries
