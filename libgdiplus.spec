@@ -19,6 +19,7 @@ BuildRequires:	libexif-devel
 BuildRequires:	libungif-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libpng-devel
+BuildRequires:	libsm-devel
 BuildRequires:	libxrender-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libfontconfig-devel
