@@ -4,12 +4,13 @@
 
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
-Version: 2.10
-Release: %mkrel 2
+Version:	2.10
+Release:	%mkrel 3
 License:	MIT
 Group:		System/Libraries
 URL:		http://go-mono.com
-Source:		http://www.go-mono.com/sources/%name/%{name}-%{version}.tar.bz2
+Source0:	http://www.go-mono.com/sources/%name/%{name}-%{version}.tar.bz2
+Patch0:		libgdiplus-2.10-libpng15.diff
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 #BuildRequires:	cairo-devel >= 0.1.22
 #BuildRequires:	glitz-devel
@@ -52,6 +53,7 @@ you to develop with libgdiplus.
 
 %prep
 %setup -q
+%patch0 -p0 -b .libpng15
 
 %build
 %configure2_5x
@@ -86,5 +88,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %attr(644,root,root) %{_libdir}/*.*a
 %{_libdir}/pkgconfig/*
-
-
