@@ -5,7 +5,7 @@
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
 Version:	2.10
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	MIT
 Group:		System/Libraries
 URL:		http://go-mono.com
