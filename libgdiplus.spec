@@ -17,7 +17,7 @@ BuildRequires:	libungif-devel
 BuildRequires:	tiff-devel
 BuildRequires:	pkgconfig(fontconfig)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:	pkgconfig(libexif
+BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libpng15)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(sm)
