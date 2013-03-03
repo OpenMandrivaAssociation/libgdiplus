@@ -12,7 +12,7 @@ URL:		http://go-mono.com
 Source0:	http://www.go-mono.com/sources/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		libgdiplus-2.10-libpng15.diff
 Patch1:		libgdiplus-2.10.9-giflib5.patch
-
+Patch2:		libgdiplus-2.10.9-gold.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	tiff-devel
@@ -51,9 +51,9 @@ you to develop with libgdiplus.
 %setup -q
 %patch0 -p0 -b .libpng15
 %patch1 -p0 -b .giflib5
+%patch2 -p1 -b .gold
 
 %build
-export LIBS=' -lm -lX11 -lglib-2.0 '
 %configure2_5x \
 	--disable-static
 %make
