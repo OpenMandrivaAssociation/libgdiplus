@@ -13,6 +13,7 @@ Source0:	http://www.go-mono.com/sources/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		libgdiplus-2.10-libpng15.diff
 Patch1:		libgdiplus-2.10.9-giflib5.patch
 Patch2:		libgdiplus-2.10.9-gold.patch
+Patch3:		libgdiplus-2.10.9-automake-1.13.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	tiff-devel
@@ -23,6 +24,7 @@ BuildRequires:	pkgconfig(libpng15)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(xrender)
+BuildRequires:	automake
 
 %description
 An Open Source implementation of the GDI+ API.
@@ -52,8 +54,16 @@ you to develop with libgdiplus.
 %patch0 -p0 -b .libpng15
 %patch1 -p0 -b .giflib5
 %patch2 -p1 -b .gold
+%patch3 -p1 -b .automake113
+
+aclocal
+libtoolize -fic
+autoheader
+automake -acf
+autoconf
 
 %build
+export LIBS='-lm'
 %configure2_5x \
 	--disable-static
 %make
