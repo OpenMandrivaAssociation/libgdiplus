@@ -4,13 +4,14 @@
 
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
-Version:	2.10
-Release:	5
+Version:	2.10.9
+Release:	1
 License:	MIT
 Group:		System/Libraries
 URL:		http://go-mono.com
 Source0:	http://www.go-mono.com/sources/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		libgdiplus-2.10-libpng15.diff
+Patch1:		libgdiplus-2.10.9-giflib5.patch
 
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
@@ -49,8 +50,10 @@ you to develop with libgdiplus.
 %prep
 %setup -q
 %patch0 -p0 -b .libpng15
+%patch1 -p0 -b .giflib5
 
 %build
+export LIBS="-lm -lX11 -lglib-2.0"
 %configure2_5x \
 	--disable-static
 %make
