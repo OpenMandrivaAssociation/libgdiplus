@@ -53,7 +53,7 @@ you to develop with libgdiplus.
 %patch1 -p0 -b .giflib5
 
 %build
-export LIBS="-lm -lX11 -lglib-2.0"
+export LIBS=' -lm -lX11 -lglib-2.0 '
 %configure2_5x \
 	--disable-static
 %make
