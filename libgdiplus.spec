@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(xrender)
 BuildRequires:	automake
+BuildRequires:	cairo-devel
 
 %description
 An Open Source implementation of the GDI+ API.
