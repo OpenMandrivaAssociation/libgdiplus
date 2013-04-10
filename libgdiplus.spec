@@ -5,7 +5,7 @@
 Name:		libgdiplus
 Summary:	An Open Source implementation of the GDI+ API
 Version:	2.10.9
-Release:	2
+Release:	3
 License:	MIT
 Group:		System/Libraries
 URL:		http://go-mono.com
@@ -70,8 +70,10 @@ export LIBS='-lm'
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
+
+# make sure pkgconfig(libgdiplus) is provided, fix this in 2.10.9:
+sed -i -e 's|-L${libjpeg_prefix}/lib||g' %{buildroot}%{_libdir}/pkgconfig/libgdiplus.pc
 
 %files -n %{libname}
 %doc AUTHORS COPYING
