@@ -1,6 +1,7 @@
 %define major	0
 %define libname	%mklibname gdiplus %{major}
 %define devname	%mklibname -d gdiplus
+%define _disable_rebuild_configure 1
 
 Summary:	An Open Source implementation of the GDI+ API
 Name:		libgdiplus
