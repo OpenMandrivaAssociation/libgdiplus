@@ -142,3 +142,41 @@
  	}
  
  	if (red != NULL) {
+--- libgdiplus-2.10.9/src/gifcodec.c.orig	2015-12-14 20:03:49.535547269 +0000
++++ libgdiplus-2.10.9/src/gifcodec.c	2015-12-14 20:07:54.639797252 +0000
+@@ -279,6 +279,7 @@
+ 	int		i;
+ 	int		l;
+ 	int		num_of_images;
++        int             errorCode;
+ 	BOOL		animated;
+ 	const GUID	*dimension;
+ 	FrameData	*frame;
+@@ -581,7 +582,7 @@
+ 	}
+ 
+ 	FreeExtensionMono(&global_extensions);
+-	DGifCloseFile (gif);
++	DGifCloseFile (gif,&errorCode);
+ 
+ 	*image = result;
+ 	return Ok;
+@@ -597,7 +598,7 @@
+ 
+ 	if (gif != NULL) {
+ 		FreeExtensionMono (&global_extensions);
+-		DGifCloseFile (gif);
++		DGifCloseFile (gif,&errorCode);
+ 	}
+ 
+ 	*image = NULL;
+@@ -923,7 +924,8 @@
+ 		}
+ 	}
+ 
+-	EGifCloseFile (fp);	
++        int errorCode;
++	EGifCloseFile (fp, &errorCode);	
+ 	
+ 	return Ok;
+ 
