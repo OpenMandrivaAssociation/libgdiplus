@@ -1,0 +1,15 @@
+diff -up libgdiplus-5.6/configure.ac.omv~ libgdiplus-5.6/configure.ac
+--- libgdiplus-5.6/configure.ac.omv~	2019-02-28 16:49:17.278492527 +0100
++++ libgdiplus-5.6/configure.ac	2019-02-28 16:49:44.184885154 +0100
+@@ -43,8 +43,8 @@ if test $text_v = "pango"; then
+ 	GDIPLUS_PKG_REQ="$GDIPLUS_PKG_REQ pangocairo-1.0"
+ fi
+ 
+-GDIPLUS_LIBS="$GDIPLUS_LIBS $CAIRO_LIBS $PANGO_LIBS"
+-GDIPLUS_CFLAGS="$GDIPLUS_CFLAGS $CAIRO_CFLAGS $PANGO_CFLAGS"
++GDIPLUS_LIBS="$GDIPLUS_LIBS $CAIRO_LIBS $PANGO_LIBS `pkg-config --libs x11`"
++GDIPLUS_CFLAGS="$GDIPLUS_CFLAGS $CAIRO_CFLAGS $PANGO_CFLAGS `pkg-config --cflags x11`"
+ 
+ # Fall back to using fontconfig/freetype-config if their .pc is not found
+ PKG_CHECK_MODULES(FONTCONFIG, fontconfig,
+diff -up libgdiplus-5.6/src/Makefile.am.omv~ libgdiplus-5.6/src/Makefile.am
