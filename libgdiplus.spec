@@ -63,10 +63,10 @@ autoconf
 export LIBS='-lm'
 %configure \
 	--disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # make sure pkgconfig(libgdiplus) is provided, fix this in 2.10.9:
 sed -i -e 's|-L${libjpeg_prefix}/lib||g' %{buildroot}%{_libdir}/pkgconfig/libgdiplus.pc
@@ -75,7 +75,7 @@ sed -i -e 's|-L${libjpeg_prefix}/lib||g' %{buildroot}%{_libdir}/pkgconfig/libgdi
 %{_libdir}/libgdiplus.so.%{major}*
 
 %files -n %{devname}
-%doc AUTHORS COPYING src/ChangeLog
+%doc AUTHORS COPYING
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 
