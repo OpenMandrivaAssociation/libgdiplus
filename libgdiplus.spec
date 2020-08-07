@@ -12,7 +12,7 @@ Group:		System/Libraries
 Url:		http://go-mono.com
 Source0:	http://download.mono-project.com/sources/libgdiplus/%{name}0-%{version}.tar.gz
 Patch0:		libgdiplus-2.10.9-gold.patch
-Patch1:		libgdiplus-5.6-x11linkage.patch
+#Patch1:		libgdiplus-5.6-x11linkage.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	tiff-devel
