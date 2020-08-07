@@ -5,12 +5,12 @@
 
 Summary:	An Open Source implementation of the GDI+ API
 Name:		libgdiplus
-Version:	5.6.1
+Version:	6.0.5
 Release:	1
 License:	MIT
 Group:		System/Libraries
 Url:		http://go-mono.com
-Source0:	http://download.mono-project.com/sources/libgdiplus/%{name}-%{version}.tar.gz
+Source0:	http://download.mono-project.com/sources/libgdiplus/%{name}0-%{version}.tar.gz
 Patch0:		libgdiplus-2.10.9-gold.patch
 Patch1:		libgdiplus-5.6-x11linkage.patch
 BuildRequires:	jpeg-devel
