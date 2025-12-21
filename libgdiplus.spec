@@ -13,6 +13,11 @@ Url:		https://go-mono.com
 Source0:	http://download.mono-project.com/sources/libgdiplus/%{name}0-%{version}.tar.gz
 Patch0:		libgdiplus-2.10.9-gold.patch
 #Patch1:		libgdiplus-5.6-x11linkage.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	tiff-devel
